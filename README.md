@@ -1,6 +1,6 @@
 # JsonReducer
 
-## What is it
+## What is it?
 An array size reducer (for JSON output purposes) into array of Eloquent Models (PHP).
 
 It's basically an implementation of following:
@@ -34,7 +34,18 @@ It's basically an implementation of following:
   }
 }
 ```
-### Example usage (laravel)
+## Installation
+
+Require package using composer
+```ssh
+composer require jlozanomaltos/json-reducer
+```
+Then just require the class (where you need it)
+```php
+use JLozanoMaltos\JsonReducer\JsonReducer;
+```
+
+## Example usage (laravel)
 ```php
 public function index()
 {
