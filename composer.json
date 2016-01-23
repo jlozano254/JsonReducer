@@ -18,7 +18,5 @@
             "JLozanoMaltos\\JsonReducer\\": "src",
             "Illuminate\\": "src/Illuminate/"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
