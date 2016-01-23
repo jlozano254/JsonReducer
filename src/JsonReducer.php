@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 class JsonReducer
 {
   /**
-  * Perform json reduce of model instance
+  * Performs a merge operation over Model instances
   * 
   * @var Illuminate\Database\Eloquent\Model array
   * 
