@@ -8,7 +8,7 @@ It's basically an implementation of following:
 ### Input example (Eloquent Model Array Visualization)
 ```javascript
 {
- "data": {
+ "data": [
 		{
 			"id": 1,
 			"name": "Jesús Emanuel",
@@ -19,7 +19,7 @@ It's basically an implementation of following:
 			"name": "Gilberto",
 			"lastname": "Reyes Barrera"
 		}
-  }
+  ]
 }
 ```
 ### Output example (Array Visualization)
