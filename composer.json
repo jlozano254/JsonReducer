@@ -19,5 +19,6 @@
             "Illuminate\\": "src/Illuminate/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
