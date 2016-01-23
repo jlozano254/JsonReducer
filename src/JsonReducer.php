@@ -1,38 +1,11 @@
 <?php
-/**
- * Author: Jesus Lozano
- * Date:   14/01/16
- * Time:   12:39 AM
+/*
+ * This file is part of JsonReducer
  *
- * Reduce Eloquent Models by recursive merge into an array 
- * that only stores once its tag (column) next to all data (values) separated by commas.
+ * (c) Jesus Lozano <jesusemanuel.254@gmail.com>
  *
- * @example input:
- * {
- *	"data": {
- *		{
- *			"id": 1,
- *			"name": "Jesús Emanuel",
- *			"lastname": "Lozano Maltos"
- * 		},
- *		{
- *			"id": 2,
- *			"name": "Gilberto",
- *			"lastname": "Reyes Barrera"
- * 		}
- *  }
- * }
- *
- * @example output:
- * {
- *	"data": {
- *		{
- *			"id":[1, 2],
- *			"name": ["Jesús Emanuel", "Gilberto"],
- *			"lastname": ["Lozano Maltos", "Reyes Barrera"]
- * 		}
- *  }
- * }
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace JLozanoMaltos\JsonReducer;
