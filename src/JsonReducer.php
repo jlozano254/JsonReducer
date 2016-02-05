@@ -22,15 +22,33 @@ class JsonReducer
   */
   public static function reduce($data)
   {
-	$merged_array = array();
-	
-	foreach ($data as $item)
-	{
-		if ($item instanceof Model) {
-			$merged_array = array_merge_recursive($merged_array, $item->toArray());
-		}
-	}
+  	$merged_array = array();
+  	
+  	foreach ($data as $item)
+  	{
+  		if ($item instanceof Model) {
+  			$merged_array = array_merge_recursive($merged_array, $item->toArray());
+  		}
+  	}
 
-	return $merged_array;
+  	return $merged_array;
+  }
+
+  /**
+  * Performs a single merge of arrays
+  * 
+  * @var array
+  * 
+  * @return array
+  */
+  public static function singleMerge($data){
+    $merged_array = array();
+    
+    foreach ($data as $item)
+    {
+        $merged_array = array_merge_recursive($merged_array, $item);
+    }
+
+    return $merged_array;
   }
 }
