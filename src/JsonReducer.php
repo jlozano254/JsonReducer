@@ -46,7 +46,7 @@ class JsonReducer
     
     foreach ($data as $item)
     {
-        $merged_array = array_merge_recursive($merged_array, $item);
+        $merged_array = (object) array_merge_recursive((array) $merged_array, (array) $item);
     }
 
     return $merged_array;
