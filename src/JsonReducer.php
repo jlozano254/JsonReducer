@@ -14,39 +14,24 @@ use Illuminate\Database\Eloquent\Model;
 class JsonReducer
 {
   /**
-  * Performs a merge operation over Model instances
+  * Performs a merge operation over Model instances or Collections
   * 
-  * @var Illuminate\Database\Eloquent\Model array
+  * @var Illuminate\Database\Eloquent\Model|mixed $data
   * 
   * @return array
   */
   public static function reduce($data)
   {
-  	$merged_array = array();
-  	
-  	foreach ($data as $item)
-  	{
-  		if ($item instanceof Model) {
-  			$merged_array = array_merge_recursive($merged_array, $item->toArray());
-  		}
-  	}
-
-  	return $merged_array;
-  }
-
-  /**
-  * Performs a single merge of arrays
-  * 
-  * @var array
-  * 
-  * @return array
-  */
-  public static function singleMerge($data){
     $merged_array = array();
     
     foreach ($data as $item)
     {
+      if ($item instanceof Model) {
+        $merged_array = array_merge_recursive($merged_array, $item->toArray());
+      }
+      else{
         $merged_array = (object) array_merge_recursive((array) $merged_array, (array) $item);
+      }
     }
 
     return $merged_array;
