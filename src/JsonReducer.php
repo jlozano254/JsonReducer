@@ -9,31 +9,31 @@
  */
 
 namespace JLozanoMaltos\JsonReducer;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class JsonReducer
 {
-  /**
-  * Performs a merge operation over Model instances or Collections
-  * 
-  * @var Illuminate\Database\Eloquent\Model|mixed $data
-  * 
-  * @return array
-  */
-  public static function reduce($data)
-  {
-    $merged_array = array();
+	/**
+	 * Performs a merge operation over Model instances or Collections
+	 * 
+	 * @var Illuminate\Database\Eloquent\Model|mixed $data
+	 * 
+	 * @return array
+	 */
+  	public static function reduce($data)
+	{
+		$merged_array = array();
     
-    foreach ($data as $item)
-    {
-      if ($item instanceof Model) {
-        $merged_array = array_merge_recursive($merged_array, $item->toArray());
-      }
-      else{
-        $merged_array = (object) array_merge_recursive((array) $merged_array, (array) $item);
-      }
-    }
+		foreach ($data as $item)
+		{
+			if ($item instanceof Model) {
+				$merged_array = array_merge_recursive($merged_array, $item->toArray());
+			}
+			else {
+				$merged_array = (object) array_merge_recursive((array) $merged_array, (array) $item);
+			}
+		}
 
-    return $merged_array;
-  }
+		return $merged_array;
+	}
 }
