@@ -15,21 +15,25 @@ class JsonReducer
 {
 	/**
 	 * Performs a merge operation over Model instances or Collections
-	 * 
-	 * @var Illuminate\Database\Eloquent\Model|mixed $data
-	 * 
+	 *
+	 * @var mixed $data
+	 *
 	 * @return array
 	 */
   	public static function reduce($data)
 	{
 		$merged_array = array();
-    
-		foreach ($data as $item)
+
+		if ($data instanceof Collection)
 		{
-			if ($item instanceof Model) {
+			foreach ($data as $item) {
 				$merged_array = array_merge_recursive($merged_array, $item->toArray());
 			}
-			else {
+		}
+		else
+		{
+			foreach ($data as $item)
+			{
 				$merged_array = (object) array_merge_recursive((array) $merged_array, (array) $item);
 			}
 		}
