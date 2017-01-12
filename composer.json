@@ -1,6 +1,6 @@
 {
     "name": "jlozanomaltos/json-reducer",
-    "description": "An array size reducer (for JSON output purposes) into array of Eloquent Models",
+    "description": "An array size reducer (for JSON output purposes) into array, using Models, Collections, Arrays",
     "keywords": ["json","reducer","laravel","lumen"],
     "license": "MIT",
     "authors": [
@@ -11,12 +11,10 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/support": ">=5.1.0"
     },
     "autoload": {
         "psr-4": {
-            "JLozanoMaltos\\JsonReducer\\": "src",
-            "Illuminate\\": "src/Illuminate/"
+            "JLozanoMaltos\\JsonReducer\\": "src"
         }
     },
     "minimum-stability": "dev"
