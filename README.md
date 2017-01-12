@@ -1,7 +1,7 @@
 # JsonReducer
 
 ## What is it?
-An array size reducer (JSON output purposes) into array of Eloquent Models for Laravel/Lumen
+An array size reducer (for JSON output purposes) using Models, Collections, Arrays for Laravel/Lumen
 
 It's basically an implementation of following:
 [Smaller Serialized Data](http://www.youtube.com/watch?v=qBxeHkvJoOQ)
