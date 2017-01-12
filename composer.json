@@ -1,6 +1,6 @@
 {
     "name": "jlozanomaltos/json-reducer",
-    "description": "An array size reducer (for JSON output purposes) into array, using Models, Collections, Arrays",
+    "description": "An array size reducer (for JSON output purposes) using Models, Collections, Arrays",
     "keywords": ["json","reducer","laravel","lumen"],
     "license": "MIT",
     "authors": [
