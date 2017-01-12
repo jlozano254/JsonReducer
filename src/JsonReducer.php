@@ -9,7 +9,6 @@
  */
 
 namespace JLozanoMaltos\JsonReducer;
-use Illuminate\Support\Collection;
 
 class JsonReducer
 {
@@ -24,16 +23,11 @@ class JsonReducer
 	{
 		$merged_array = array();
 
-		if ($data instanceof Collection)
-		{
-			foreach ($data as $item) {
+		foreach ($data as $item) {
+			if (method_exists($item, 'toArray')) {
 				$merged_array = array_merge_recursive($merged_array, $item->toArray());
 			}
-		}
-		else
-		{
-			foreach ($data as $item)
-			{
+			else {
 				$merged_array = (object) array_merge_recursive((array) $merged_array, (array) $item);
 			}
 		}
